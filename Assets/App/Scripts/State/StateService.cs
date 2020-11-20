@@ -10,12 +10,13 @@ namespace ReactNativeDemo.State
 	{
 		private StateServiceProfile stateServiceProfile;
 
-		public StateService(string name,  uint priority,  BaseMixedRealityProfile profile) :
-            base(name, priority, profile) 
+		public StateService(string name,  uint priority,  BaseMixedRealityProfile profile) : base(name, priority, profile) 
 		{
 			stateServiceProfile = (StateServiceProfile)profile;
 		}
 
 		public ITwoButtonModel ButtonModel { get; } = new TwoButtonModel();
+
+		public IObjectListModel ListModel {get;} = new ObjectListModel();
     }
 }
