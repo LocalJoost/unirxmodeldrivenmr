@@ -8,10 +8,6 @@ namespace ReactNativeDemo.State
     [Serializable]
     public class SimpleDemoModel
     {
-        public SimpleDemoModel()
-        {
-        }
-
         public SimpleDemoModel(Vector3 initialPosition)
         {
             this.initialPosition.Value = initialPosition;

@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace ReactNativeDemo.Mvc
 {
-    public class ObjectListController<T> : MonoBehaviour
+    public abstract class ObjectListController<T> : MonoBehaviour
     {
         private CompositeDisposable subscriptions;
 

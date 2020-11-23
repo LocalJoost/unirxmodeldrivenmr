@@ -10,15 +10,13 @@ namespace ReactNativeDemo.State
             MessageBroker.Default.Receive<ObjectDeleteMessage<SimpleDemoModel>>().Subscribe(ProcessDeleteMessage);
         }
 
-        private readonly ReactiveCollection<SimpleDemoModel> shapes = new ReactiveCollection<SimpleDemoModel>();
-        
-        public IReactiveCollection<SimpleDemoModel> Shapes => shapes;
+        public IReactiveCollection<SimpleDemoModel> Shapes { get; } = new ReactiveCollection<SimpleDemoModel>();
 
         private void ProcessDeleteMessage(ObjectDeleteMessage<SimpleDemoModel> objectToDelete)
         {
-            if (shapes.Contains(objectToDelete.Model))
+            if (Shapes.Contains(objectToDelete.Model))
             {
-                shapes.Remove(objectToDelete.Model);
+                Shapes.Remove(objectToDelete.Model);
             }
         }
     }
