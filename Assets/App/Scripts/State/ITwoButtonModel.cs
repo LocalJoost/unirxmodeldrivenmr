@@ -1,5 +1,4 @@
 ﻿using UniRx;
-using MRTKExtensions.ServiceExtensions;
 
 namespace ReactNativeDemo.State
 {
